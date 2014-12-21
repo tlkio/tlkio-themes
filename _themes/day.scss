@@ -1,0 +1,88 @@
+
+/* Day Theme ------------------------------------------- */
+
+$day-color: hsl(216, 100%, 68%);
+$day-color-bg: hsl(50,10%,95%);
+
+
+.theme-picker-item[data-theme="theme--day"] {
+  background-color: $day-color;
+}
+
+/* Name space ------------------------------------------- */
+
+.theme--day {
+  background-color: $day-color-bg;
+
+/* Components ---------------------------------------------------- */
+
+.button {
+  color: $day-color;
+  border-color: $day-color;
+  &:hover {
+    color: white;
+    background-color: lighten( $day-color, 8% );
+  }
+  &:active {
+    background-color: darken( $day-color, 5% );;
+  }
+}
+
+.button--danger {
+  color: hsl(0, 100%, 94%);
+  border-color: hsla(0, 100%, 35%, 0);
+  background-color: hsl(0, 100%, 70%);
+  &:hover {
+    background-color: hsl(0, 100%, 60%);
+  }
+  &:active {
+    background-color: hsl(0, 100%, 80%);
+  }
+}
+
+.button-down {
+  background-color: $day-color-bg;
+  &:hover {
+      color: white;
+      background-color: lighten( $day-color, 10% );
+  }
+  &:active {
+      background-color: $day-color;
+  }
+  &.new {
+    box-shadow: 0 0 0 2px $day-color;
+  }
+}
+
+/* Header ------------------------------------------- */
+
+.header-bar {
+  background-color: $day-color;
+}
+
+/* Chat ------------------------------------------- */
+
+.post-message.unread .post-time-dot {
+    background-color: $day-color;
+}
+
+
+/* Footer ------------------------------------------- */
+
+
+
+
+/* Side ------------------------------------------- */
+
+.menu-item.isOn {
+  color: white;
+  background: $day-color;
+}
+
+.counter-button {
+  color: inherit;
+  border-color: hsla(0,0%,0%,.1);
+}
+
+
+} // end of theme selector

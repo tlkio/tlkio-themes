@@ -1,0 +1,232 @@
+
+/* Minimal Theme ------------------------------------------- */
+
+$minimal-color: hsl(0,0%,75%);
+$minimal-color-bg: hsl(0,0%,100%);
+$minimal-color-text: hsl(0,0%,30%);
+$minimal-color-text-lighter: lighten( $minimal-color-text, 36% );
+
+
+.theme-picker-item[data-theme="theme--minimal"] {
+  background-color: $minimal-color;
+}
+
+
+/* Name space ------------------------------------------- */
+
+.theme--minimal {
+  color: $minimal-color-text;
+  background-color: $minimal-color-bg;
+
+
+/* Components ---------------------------------------------------- */
+
+.button {
+  color: $minimal-color;
+  border-color: $minimal-color;
+  &:hover {
+    color: white;
+    background-color: lighten( $minimal-color, 8% );
+  }
+  &:active {
+    background-color: darken( $minimal-color, 5% );;
+  }
+}
+
+.button--danger {
+  color: hsl(0, 100%, 94%);
+  border-color: hsla(0, 100%, 35%, 0);
+  background-color: hsl(0, 100%, 70%);
+  &:hover {
+    background-color: hsl(0, 100%, 60%);
+  }
+  &:active {
+    background-color: hsl(0, 100%, 80%);
+  }
+}
+
+.button-down {
+  background-color: $minimal-color-bg;
+  &:hover {
+      color: white;
+      background-color: lighten( $minimal-color, 10% );
+  }
+  &:active {
+      background-color: $minimal-color;
+  }
+  &.new {
+    box-shadow: 0 0 0 2px $minimal-color;
+  }
+}
+
+.input-text {
+  box-shadow: none;
+  border-color: $minimal-color;
+  background: transparent;
+}
+
+.tooltip {
+  background-color: $minimal-color-bg;
+}
+
+
+/* Header ------------------------------------------- */
+
+.header-bar {
+  background: hsla(0,0%,94%,.95);
+  box-shadow: 0 1px 2px hsla(0,0%,0%,.1);
+}
+
+.header-icon {
+    background-color: hsla(0,0%,0%,.2);
+    &:hover {
+        background-color: hsla(0,0%,0%,1);
+    }
+    &:active {
+        background-color: hsla(0,0%,0%,.5);
+    }
+}
+
+.header-channel {
+  color: $minimal-color-text;
+}
+
+.nav-button-slider {
+  fill: $minimal-color-text;
+}
+
+.nav-counter {
+  color: $minimal-color-text;
+  background: $minimal-color-bg;
+  box-shadow: none;
+}
+
+/* Chat ------------------------------------------- */
+
+.post {
+  margin: 0 0 0 30px;
+  border: none;
+  background-color: transparent;
+  &:before {
+    content: none;
+  }
+}
+
+.post.me {
+  background-color: transparent;
+}
+
+.post-meta {
+  left: -30px;
+  @media (min-width: 921px) {
+    top: 6px;
+  }
+}
+
+.post-name {
+  left: 5px;
+  color: $minimal-color-text-lighter;
+  @media (min-width: 921px) {
+    left: auto;
+    top: 4px;
+  }
+}
+
+.me .post-name {
+  color: $minimal-color-text;
+}
+
+.post-avatar--troll {
+  background: none;
+  border: 1px solid $minimal-color;
+}
+
+.time {
+  padding-top: 1em;
+  margin-top: 1em;
+  margin-left: 50px;
+  font-size: 0.7em;
+  color: $minimal-color-text-lighter;
+  border-top: 1px solid hsla(0,0%,0%,.06);
+}
+
+
+/* Markdown -------------- */
+.chat blockquote {
+  padding: 0 .4em;
+  color: inherit;
+  border-radius: 0;
+  border: none;
+  border-left: 4px solid hsla(0, 0%, 0%, 0.1);
+  background: transparent;
+}
+
+.chat pre,
+.chat code {
+  color: hsl(0, 0%, 50%);
+  border: none;
+  background-color: hsl(0, 0%, 92%);
+}
+
+
+
+/* Footer ------------------------------------------- */
+
+.message-input {
+  box-shadow: none;
+  border-color: $minimal-color;
+  background-color: transparent;
+  &:hover {
+    border-color: lighten( $minimal-color, 5% );
+  }
+  &:focus {
+    border-color: transparent;
+  }
+}
+
+.join {
+    background: transparent;
+}
+
+
+/* Side ------------------------------------------- */
+
+.menu-item.isOn {
+  color: white;
+  background: $minimal-color;
+}
+
+.panel-button {
+  background-color: hsla(0, 0%, 0%, 0.1);
+}
+
+.theme-picker-item {
+  box-shadow: none;
+}
+
+.panel-counter {
+  color: hsla(0, 100%, 100%, 0.9);
+  box-shadow: none;
+  background: hsla(0, 0%, 0%, 0.2);
+}
+
+.participants {
+  border-radius: 0;
+  border-width: 0 0 1px 0;
+  background: none;
+}
+
+.counter {
+  border-radius: 0;
+  border: none;
+  background: none;
+  margin: 0;
+}
+
+.counter-button {
+  right: 0;
+  color: inherit;
+  border-color: hsla(0,0%,0%,.1);
+}
+
+} // end of theme selector

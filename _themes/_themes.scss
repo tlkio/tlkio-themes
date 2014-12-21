@@ -1,0 +1,24 @@
+
+/* Theme Default ------------------------------------------- */
+@import 'day';
+
+/* Theme Night ------------------------------------------- */
+@import 'night';
+
+/* Theme 3 ------------------------------------------- */
+@import 'minimal';
+
+/* Theme 4 ------------------------------------------- */
+@import 'pop';
+
+
+
+/* Depricated ------------------------------------------- */
+
+.theme1 .header-bar {
+  background-color: $day-color;
+}
+
+.theme4 .header-bar {
+  background-color: $pop-color;
+}

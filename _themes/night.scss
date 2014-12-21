@@ -1,0 +1,289 @@
+
+/* Theme - Night ------------------------------------------- */
+
+$night-color: hsl(216, 8%, 16%);
+$night-color-accent: hsl(50, 100%, 50%);
+
+
+.theme-picker-item[data-theme="theme--night"] {
+  background-color: $night-color;
+}
+
+
+
+/* Name space ------------------------------------------- */
+
+.theme--night {
+  background-color: $night-color;
+// } Wrong indentation is kept for easier use.
+
+
+/* scrollbar ---------------------------------------------------- */
+
+&::-webkit-scrollbar,
+::-webkit-scrollbar {
+  background-color: darken( $night-color, 5% );
+}
+&::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+  background-color: lighten( $night-color, 5% );
+}
+
+
+.button {
+  color: hsl(0,0%,60%);
+  border-color: hsla(0,0%,0%,.4);
+  background-color: lighten( $night-color, 10% );
+  @include background-image( linear-gradient( top, hsla(0,0%,100%,.05), hsla(0,0%,100%,0) ));
+  box-shadow: none;
+  &:hover {
+    background-color: lighten( $night-color, 8% );
+  }
+  &:active {
+    background-color: darken( $night-color, 5% );;
+    box-shadow: none;
+  }
+}
+
+
+.button--danger {
+  color: hsl(0, 100%, 92%);
+  border: 1px solid hsla(0, 100%, 35%, 0.2);
+  box-shadow: none;
+  background-color: red;
+  @include background-image( linear-gradient(top, hsla(0, 80%, 60%, 0.5), hsla(0, 80%, 36%, 0.5) ));
+  &:hover {
+    background-color: hsl(0,100%,60%);
+  }
+  &:active {
+    background-color: hsl(0,100%,30%);
+    box-shadow: none;
+  }
+}
+
+.tooltip {
+  border-color: hsla(0,0%,0%,.3);
+  background-color: lighten( $night-color, 5% );
+}
+
+
+/* scroll down Button ---------------------------------------------------- */
+
+.button-down {
+  background-color: lighten( $night-color, 10% );
+  &.show.new {
+    box-shadow: 0 0 0 2px $night-color-accent;
+  }
+}
+
+
+.input-text {
+  color: hsl(0,0%,80%);
+  border-color: hsla(0,0%,0%,.3);
+  background-color: hsla(0,0%,0%,.2);
+  box-shadow: 0 1px 1px hsla(0,0%,100%,.1);
+  &::-webkit-input-placeholder { color: hsla(0,0%,100%,.3); }
+  &::-moz-placeholder { color: hsla(0,0%,100%,.3); }
+  &:-ms-input-placeholder { color: hsla(0,0%,100%,.3); }
+}
+
+
+/* Header ------------------------------------------- */
+
+.header-bar {
+  background-color: lighten( $night-color, 15% );
+}
+
+.header-icon {
+  background-color: hsla(0,0%,0%,.2);
+  &:hover {
+    background-color: hsla(0,0%,0%,.1);
+  }
+  &:active {
+    background-color: hsla(0,0%,0%,.3);
+  }
+}
+
+.header-channel {
+	color: hsla(0,0%,100%,.5);
+}
+
+/* Chat ------------------------------------------- */
+
+.chat {
+  color: hsl(0,0%,80%);
+}
+
+.post-name {
+  color: hsla(0, 0%, 100%, 0.3);
+}
+
+
+.post {
+  border-color: hsla(0,0%,0%,.3);
+  background-color: lighten( $night-color, 5% );
+  &.me {
+    background-color: lighten( $night-color, 3% );
+  }
+}
+
+.post-avatar {
+  box-shadow: none;
+}
+
+.post-avatar--troll {
+  color: hsla(0, 0%, 100%, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.time {
+  color: hsla(0, 0%, 100%, 0.2);
+}
+
+.post-time-dot {
+  background-color: hsl(0, 0%, 25%);
+}
+
+.post-message.unread .post-time-dot {
+  background-color: $night-color-accent;
+}
+
+.post-time-tag {
+  border-color: hsla(0,0%,0%,.4);
+  background: hsl(0, 0%, 12%);
+}
+
+
+/* Markdown -------------- */
+
+.chat code,
+.chat pre {
+  color: hsl(50, 30%, 60%);
+  border: 1px solid hsla(0, 0%, 0%, .2);
+  background-color: hsl(50, 10%, 15%);
+}
+
+.chat pre code {
+  border: none;
+}
+
+.chat blockquote {
+  color: hsl(208, 90%, 70%);
+  border: none;
+  border-left: 4px solid hsl(208, 90%, 60%);
+  background: lighten( $night-color, 10% );
+}
+
+.chat hr {
+  border-color: hsla(0,0%,100%,.1);
+}
+
+
+
+/* Footer ------------------------------------------- */
+
+.message-avatar {
+  box-shadow: none;
+}
+
+.message-input {
+  color: #fff;
+  border-color: hsla(0,0%,0%,.3);
+  background-color: hsla(0,0%,0%,.15);
+  box-shadow: inset 0 1px 3px hsla(0,0%,0%,.06), 0 1px 1px hsla(0,0%,100%,.1);
+  -webkit-font-smoothing: antialiased;
+  &:hover {
+    border-color: hsla(0,0%,0%,.5);
+  }
+  &:focus {
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  &::-webkit-input-placeholder { color: hsla(0,0%,100%,.3); }
+  &::-moz-placeholder { color: hsla(0,0%,100%,.3); }
+  &:-ms-input-placeholder { color: hsla(0,0%,100%,.3); }
+}
+
+.join {
+  color: hsl(0,0%,40%);
+  border-color: hsla(0,0%,0%,.3);
+  background-color: hsla(0,0%,0%,.2);
+}
+
+.join-hl {
+  color: hsl(0,0%,60%);
+}
+
+.join-hint {
+  color: hsl(0,0%,30%);
+}
+
+
+
+/* Side ------------------------------------------- */
+
+.aside {
+  background-color: $night-color;
+}
+
+.menu-item {
+  border-color: hsla(0,0%,0%,.4);
+  background-color: lighten( $night-color, 10% );
+  &:active {
+    box-shadow: none;
+  }
+  &.isOn {
+    border: 1px solid hsl(0, 0%, 15%);
+    border-left: none;
+    box-shadow: none;
+    background-color: lighten( $night-color, 2% );
+  }
+}
+
+.participants {
+  color: hsl(0,0%,80%);
+  border-color: hsla(0,0%,0%,.3);
+  background-color: lighten( $night-color, 5% );
+}
+
+.counter {
+  color: hsl(0,0%,40%);
+  border-color: hsla(0,0%,0%,.2);
+  background-color: lighten( $night-color, 2% );
+}
+
+
+/* Popup */
+
+.popup-box {
+  color: hsl(0,0%,60%);
+}
+
+.popup-header {
+  border-color: hsla(0,0%,0%,.3);
+  background-color: lighten( $night-color, 5% );
+}
+
+.popup-header-title {
+  color: hsl(0,0%,80%);
+}
+
+.popup-content {
+  background-color: $night-color;
+}
+
+.popup-link {
+  color: hsl(0,0%,50%);
+  border-color: hsla(0,0%,0%,.3);
+  background: hsla(0,0%,0%,.2);
+}
+
+.popup-footer {
+  color: hsl(0,0%,50%);
+  border-color: hsla(0,0%,100%,.06);
+  background-color: lighten( $night-color, 5% );
+}
+
+
+} // end of theme selector

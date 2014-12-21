@@ -1,0 +1,151 @@
+
+/* Pop Theme ------------------------------------------- */
+
+$pop-color: hsl(356, 100%, 75%);
+$pop-color-box: hsl( hue($pop-color) , 50%, 98%);
+$pop-color-bg: hsl( hue($pop-color) , 50%, 95%);
+$pop-color-text: hsl( hue($pop-color) , 40%, 40%);
+
+
+
+.theme-picker-item[data-theme="theme--pop"] {
+  background-color: $pop-color;
+}
+
+
+
+/* Name space ------------------------------------------- */
+
+.theme--pop {
+  color: $pop-color-text;
+  background-color: $pop-color-bg;
+
+
+/* Components ---------------------------------------------------- */
+
+.button {
+  color: $pop-color;
+  border-color: $pop-color;
+  &:hover {
+    color: white;
+    background-color: lighten( $pop-color, 8% );
+  }
+  &:active {
+    background-color: darken( $pop-color, 5% );;
+  }
+}
+
+.button--danger {
+  color: hsl(0, 100%, 94%);
+  border-color: hsla(0, 100%, 35%, 0);
+  background-color: hsl(0, 100%, 70%);
+  &:hover {
+    background-color: hsl(0, 100%, 60%);
+  }
+  &:active {
+    background-color: hsl(0, 100%, 80%);
+  }
+}
+
+.button-down {
+  background-color: $pop-color-bg;
+  &:hover {
+      color: white;
+      background-color: lighten( $pop-color, 10% );
+  }
+  &:active {
+      background-color: $pop-color;
+  }
+  &.new {
+    box-shadow: 0 0 0 2px $pop-color;
+  }
+}
+
+.popup-header,
+.popup-footer {
+    background-color: $pop-color-box;
+}
+
+.popup-content {
+    background-color: $pop-color-bg;
+}
+
+
+/* Header ------------------------------------------- */
+
+.header-bar {
+  background-color: $pop-color;
+}
+
+
+/* Chat ------------------------------------------- */
+
+.post {
+  margin-bottom: 1em;
+  border-radius: 10px;
+  border-top-width: 1px;
+  border-color: hsla(0, 0%, 0%, 0.1);
+  background-color: $pop-color-box;
+  &:before {
+    top: 14px;
+  }
+}
+
+.post-name {
+  @media (min-width: 921px) {
+    top: 7px;
+  }
+}
+
+.post-avatar--troll {
+  line-height: 30px;
+}
+
+.post-message:first-of-type .post-time {
+  top: 7px;
+}
+
+.post-message.unread .post-time-dot {
+    background-color: $pop-color;
+}
+
+/* Me */
+.me,
+.me .post-avatar--troll {
+  background-color: lighten($pop-color, 18%);
+}
+
+.me .post-name {
+    color: $pop-color;
+}
+
+
+
+/* Footer ------------------------------------------- */
+
+
+
+
+/* Side ------------------------------------------- */
+
+.menu-item.isOn {
+  color: white;
+  background: $pop-color;
+}
+
+.tooltip,
+.participants {
+  background-color: $pop-color-box;
+}
+
+.counter {
+  background-color: darken($pop-color-box, 4%);
+}
+
+.counter-button {
+  color: inherit;
+  border-color: hsla(0,0%,0%,.1);
+}
+
+
+} // end of theme selector
